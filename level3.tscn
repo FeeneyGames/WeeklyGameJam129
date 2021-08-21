@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://wallTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://pitTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://goal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://crusher.tscn" type="PackedScene" id=5]
+
+[node name="Level3" type="Node2D"]
+
+[node name="WallTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 10, 10 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 1, 0, 524319, 2, 0, 589824, 3, 0, 589855, 5, 0, 655360, 3, 0, 655391, 5, 0, 720896, 3, 0, 720927, 5, 0, 786432, 3, 0, 786463, 5, 0, 851968, 6, 0, 851969, 7, 0, 851970, 7, 0, 851971, 7, 0, 851972, 7, 0, 851973, 7, 0, 851974, 7, 0, 851975, 7, 0, 851976, 7, 0, 851977, 7, 0, 851978, 7, 0, 851979, 7, 0, 851980, 7, 0, 851981, 7, 0, 851982, 7, 0, 851983, 7, 0, 851984, 7, 0, 851985, 7, 0, 851986, 7, 0, 851987, 7, 0, 851988, 7, 0, 851989, 7, 0, 851990, 7, 0, 851991, 7, 0, 851992, 7, 0, 851993, 7, 0, 851994, 7, 0, 851995, 7, 0, 851996, 7, 0, 851997, 7, 0, 851998, 7, 0, 851999, 8, 0 )
+
+[node name="PitTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 20, 105 )
+
+[node name="Goal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 290, 105 )
+
+[node name="Crusher" parent="." instance=ExtResource( 5 )]
+position = Vector2( 280, 95 )
+
+[node name="Crusher2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 270, 105 )
+
+[node name="Crusher3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 260, 115 )
+
+[node name="Crusher4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 250, 125 )

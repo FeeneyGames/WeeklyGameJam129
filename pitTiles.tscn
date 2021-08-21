@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tilesBasic.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5, 4 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4, 5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 5 )
+
+[node name="PitTiles" type="Node2D"]
+
+[node name="PitUL" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40.8779, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 30, 0, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitUL"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PitUL/Area2D"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="PitU" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 54.4305, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 40, 0, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitU"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PitU/Area2D"]
+position = Vector2( 0, 1 )
+shape = SubResource( 3 )
+
+[node name="PitUR" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 68.6441, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 50, 0, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitUR"]
+editor/display_folded = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PitUR/Area2D"]
+position = Vector2( -1, 1 )
+shape = SubResource( 2 )
+
+[node name="PitL" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40.8779, 13.3322 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 30, 10, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitL"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PitL/Area2D"]
+position = Vector2( 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Pit" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 54.4305, 13.3322 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 40, 10, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="Pit"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pit/Area2D"]
+shape = SubResource( 1 )
+
+[node name="PitR" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 68.6441, 13.3322 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 50, 10, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitR"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PitR/Area2D"]
+position = Vector2( -1, 0 )
+shape = SubResource( 4 )
+
+[node name="PitDL" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40.8779, 25.893 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 30, 20, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitDL"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="PitDL/Area2D"]
+position = Vector2( 1, -1 )
+shape = SubResource( 2 )
+
+[node name="PitD" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 54.4305, 25.893 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 40, 20, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitD"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PitD/Area2D"]
+position = Vector2( 0, -1 )
+shape = SubResource( 3 )
+
+[node name="PitDR" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 68.9746, 25.893 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 50, 20, 10, 10 )
+
+[node name="Area2D" type="Area2D" parent="PitDR"]
+editor/display_folded = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="PitDR/Area2D"]
+position = Vector2( -1, -1 )
+shape = SubResource( 2 )
